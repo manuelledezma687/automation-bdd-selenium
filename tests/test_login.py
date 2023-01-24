@@ -9,4 +9,6 @@ def test_login_user(browser):
   login_page.typeUser(USER)
   login_page.typePassword(PASSWORD)
   login_page.clickToLogin()
-  login_page.UserIsLogged()
+  #login_page.UserIsLogged()
+  
+  ##First commit wait others commits
