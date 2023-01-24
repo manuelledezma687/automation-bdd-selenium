@@ -1,6 +1,5 @@
 from actions.LoginActions import LoginActions
 from configurations.Config import BASE_URI, USER, PASSWORD
-from time import sleep
 
 def test_login_user(browser):
   login_page = LoginActions(browser)
