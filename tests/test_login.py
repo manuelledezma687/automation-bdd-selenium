@@ -1,13 +1,12 @@
 from actions.LoginActions import LoginActions
-from configurations.Config import BASE_URI, USER, PASSWORD
+from configurations.config import testData
+
 
 def test_login_user(browser):
   login_page = LoginActions(browser)
-  login_page.loadSite(BASE_URI)
-  login_page.clickToLoginSection()
-  login_page.typeUser(USER)
-  login_page.typePassword(PASSWORD)
-  login_page.clickToLogin()
-  #login_page.UserIsLogged()
-  
-  ##First commit wait others commits
+  login_page.load_web(testData.BASE_URI)
+  login_page.click_login_section()
+  login_page.type_user(testData.USER)
+  login_page.type_password(testData.PASSWORD)
+  login_page.click_to_login()
+  login_page.user_is_logged()
