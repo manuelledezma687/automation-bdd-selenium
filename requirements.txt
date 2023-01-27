@@ -1,7 +1,6 @@
 async-generator==1.10
 attrs==22.1.0
 autopep8==2.0.1
-behave==1.2.6
 certifi==2022.9.14
 h11==0.13.0
 idna==3.4
