@@ -1,0 +1,4 @@
+[MASTER]
+# naming style
+# missing-module-docstring
+disable= C0103,C0114,C0115,C0116 
