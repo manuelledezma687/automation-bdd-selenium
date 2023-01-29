@@ -1,4 +1,5 @@
 [MASTER]
-# naming style
+# naming style C0103
+# Error VScode E0401
 # missing-module-docstring
-disable= C0103,C0114,C0115,C0116 
+disable= C0103,E0401,C0114,C0115,C0116 
