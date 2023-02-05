@@ -1,9 +1,11 @@
+"""This module has the base actions from this project"""
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import InvalidSelectorException as EX
 
 
 class BaseActions:
+
     def __init__(self, browser):
         self.browser = browser
 
@@ -13,7 +15,7 @@ class BaseActions:
     def element_click(self, by_locator):
         try:
             WebDriverWait(self.browser, timeout=10).until(
-                EC.visibility_of_element_located(by_locator))
+                EC.presence_of_element_located(by_locator))
             user = self.browser.find_element(*by_locator)
             user.click()
         except EX:
