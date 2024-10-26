@@ -1,7 +1,7 @@
 """This module has the base actions from this project"""
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import InvalidSelectorException, TimeoutException
+from selenium.common.exceptions import TimeoutException
 
 
 class BaseActions:
