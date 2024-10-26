@@ -22,6 +22,6 @@ class LoginActions(BaseActions):
 
     def click_to_login(self):
         self.element_click(Login.loginButton)
-
-    def user_is_logged(self):
-        self.is_displayed(Login.userLogged)
+    
+    def user_is_logged(self) -> bool:
+        return self.is_displayed(Login.userLogged)

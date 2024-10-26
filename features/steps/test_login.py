@@ -12,21 +12,20 @@ def test_login_page():
 
 
 @given('The user access to the Website')
-def open_web(browser, props):
+def open_web(browser, props)-> None:
     login_page = LoginActions(browser)
     login_page.load_web(f"{props('baseUrl')}")
 
 
 @when('The user enter with the credentials')
-def step_login_user(browser, props):
+def step_login_user(browser, props)-> None:
     login_page = LoginActions(browser)
-    login_page.click_login_section()
     login_page.type_user(f"{props('user')}")
     login_page.type_password(f"{props('password')}")
     login_page.click_to_login()
 
 
 @then('The user access successfully')
-def step_login_user_successfully(browser):
+def step_login_user_successfully(browser) -> None:
     login_page = LoginActions(browser)
-    login_page.user_is_logged()
+    assert login_page.user_is_logged(), "The user is not logged in successfully."
